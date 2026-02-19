@@ -6,6 +6,8 @@ class Personaje
 Pacman --|> Personaje 
 
 Tarea 1 practica 2 
+
+@startuml
 class Espadachin
 class Mago
 class Arquero
@@ -29,3 +31,23 @@ Arquero -|> Personaje
 Arquero *-- Capucha
 Arquero *-- Botas
 Arquero o-- Arco
+Arquero o-- Ballesta
+
+Ladron --|> Personaje
+Ladron *-- Abrigo
+Ladron *-- Guante
+Ladron o-- Daga
+Ladron o-- Ganzúa
+ 
+Acolito --|> Personaje 
+Acolito *-- Tunicasagrada
+Acolito *-- Rosario
+Acolito o-- Maza 
+Acolito o-- Vara 
+
+Mercader --|> Personaje
+Mercader *-- Delantal 
+Mercader *-- Carrito 
+Mercader o-- Hacha
+Mercader o-- Garrote
+@enduml
