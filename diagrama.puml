@@ -1,6 +1,31 @@
-class Pacman
+/*class Pacman
 class Fantasma
 class Fruta
 class Personaje 
 
 Pacman --|> Personaje 
+
+Tarea 1 practica 2 
+class Espadachin
+class Mago
+class Arquero
+class Ladron
+class Acolito
+class Mercader
+
+Espadachin --|> Personaje
+Espadachin *-- Cotademalla
+Espadachin *-- Yelmo
+Espadachin o-- Espada
+Espadachin o-- Escudo
+
+Mago --|> Personaje
+Mago *-- Túnicadeseda
+Mago *-- Sombrerodemago
+Mago o-- Bastón
+Mago o-- Vara 
+
+Arquero -|> Personaje
+Arquero *-- Capucha
+Arquero *-- Botas
+Arquero o-- Arco
