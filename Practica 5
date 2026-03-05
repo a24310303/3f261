@@ -1,0 +1,121 @@
+@startuml
+
+interface ICombatible {
+  +Dañar(Monstruo)
+  +RecibirDanio(int)
+}
+
+class Usuario
+
+class Personaje {
+  +Morir()
+}
+
+Personaje --|> ICombatible 
+
+class Espadachin
+class Mago
+class Arquero
+class Ladron
+class Acolito
+class Mercader
+
+
+class Monstruo {
+  +RecibirDanio(int)
+}
+
+
+class NoMuerto
+class Demonio
+class Pez
+class Planta
+class Forma
+class Insecto
+class Bruto
+class Angel
+class Dragon
+class Humanoide
+
+NoMuerto --|> Monstruo
+Demonio --|> Monstruo
+Pez --|> Monstruo
+Planta --|> Monstruo
+Forma --|> Monstruo
+Insecto --|> Monstruo
+Bruto --|> Monstruo
+Angel --|> Monstruo
+Dragon --|> Monstruo
+Humanoide --|> Monstruo
+
+
+class Espada
+class Escudo
+class CotaDeMalla
+class Yelmo
+
+class TunicaDeSeda
+class SombreroDeMago
+class Baston
+class Vara
+
+class Capucha
+class Botas
+class Arco
+class Ballesta
+
+class Abrigo
+class Guante
+class Daga
+class Ganzua
+
+class TunicaSagrada
+class Rosario
+class Maza
+
+class Delantal
+class Carrito
+class Hacha
+class Garrote
+
+
+Usuario o-- Personaje 
+
+Espadachin --|> Personaje
+Mago --|> Personaje
+Arquero --|> Personaje
+Ladron --|> Personaje
+Acolito --|> Personaje
+Mercader --|> Personaje
+
+Espadachin "1" *-- "1" CotaDeMalla
+Espadachin "1" *-- "1" Yelmo
+Espadachin "1" o-- "1" Espada
+Espadachin "1" o-- "1" Escudo
+
+Mago "1" *-- "1" TunicaDeSeda
+Mago "1" *-- "1" SombreroDeMago
+Mago "1" o-- "1" Baston
+Mago "1" o-- "1" Vara
+
+Arquero "1" *-- "1" Capucha
+Arquero "1" *-- "2" Botas
+Arquero "1" o-- "1" Arco
+Arquero "1" o-- "1" Ballesta
+
+Ladron "1" *-- "1" Abrigo
+Ladron "1" *-- "2" Guante
+Ladron "1" o-- "1" Daga
+Ladron "1" o-- "1" Ganzua
+
+Acolito "1" *-- "1" TunicaSagrada
+Acolito "1" *-- "1" Rosario
+Acolito "1" o-- "1" Maza
+Acolito "1" o-- "1" Vara
+
+Mercader "1" *-- "1" Delantal
+Mercader "1" *-- "1" Carrito
+Mercader "1" o-- "1" Hacha
+Mercader "1" o-- "1" Garrote
+
+@enduml
